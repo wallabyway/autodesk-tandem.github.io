@@ -1,8 +1,8 @@
-## Autodesk Tandem APIs
+### Autodesk Tandem APIs
 
 Tandem digital twins represent a hub of information about your facility and they establish the existence and location of assets within that facility. That foundation is critical, but any good digital twin will include integrations with other systems and will support programmatic management of the asset data. Therefore, API access to the Tandem data model is essential.  Over time, we plan to offer comprehensive APIs in several contexts to help developers customize and extend the foundational capabilities that the Tandem product provides.
 
-[API Contexts](./img/API_contexts.png)
+![API Contexts](./img/API_contexts.png)
 
 Sample code for each API context exists on GitHub: [Tandem API Samples](https://github.com/autodesk-tandem)
 
@@ -15,14 +15,18 @@ The REST API is a thin layer over the underlying Tandem database.  It is designe
 
 In general, the recommendation is to use the Tandem client application to setup Facilities and create Parameters. Then once a Facility is setup, use the REST API to read/write asset properties or assign classifications to assets.
 
-A Postman collection is provided to allow interactive testing of the REST APIs.  It also has sample payloads that explain the various options. Details on how to use the Postman collection can be found here: [Tandem Postman Collection](API_PostmanCollection.md).  The Postman collection also includes basic documentation for each REST endpoint.
+A Postman collection is provided to allow interactive testing of the REST APIs.  It also has sample payloads that explain the various options. Details on how to use the Postman collection can be found here: [Tandem Postman Collection](./API_PostmanCollection.md).  The Postman collection also includes basic documentation for each REST endpoint.
 
 Additional notes about calling the most commonly used endpoints for read/write of asset properties, and for assigning classifications to assets can be found here:
 
-Read/Query properties (/scan): [Read](API_scan.md)
-Write properties (/mutate): [Write](API_mutate.md)
-Classification assignment: [Classification](API_classification.md)
-Qualified Property Names (/attrs)[QualifiedProperties](API_attrs.md)
+Read/Query properties (/scan): [Read](./API_scan.md)
+
+Write properties (/mutate): [Write](./API_mutate.md)
+
+Classification assignment: [Classification](./API_classification.md)
+
+Qualified Property Names (/attrs)[QualifiedProperties](./API_attrs.md)
+
 
 # Javascript SDK
 
