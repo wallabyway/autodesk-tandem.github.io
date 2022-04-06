@@ -6,9 +6,9 @@ Tandem digital twins represent a hub of information about your facility and they
 
 Sample code for each API context exists on GitHub: [Tandem API Samples](https://github.com/autodesk-tandem)
 
-Currently, these samples are marked "Private". To gain access, you will need to request that we add your GitHub username to the repository.
+_NOTE: Currently, these samples are marked "Private". To gain access, you will need to request that we add your GitHub username to the repository._
 
-## REST API
+# REST API
 The REST API is the first one that will be officially supported.  It is the base level API that communicates with the Tandem data server and manages create/read/write/delete of property data for assets. These asset properties are also called "parameters" in the Tandem client app, and those names are interchangeable in this documentation.
 
 The REST API is a thin layer over the underlying Tandem database.  It is designed to be very efficient and powerful, but with that comes some slightly cryptic payloads and some calls that could cause unwanted changes to the facility data if not constructed properly.  We advise that you avoid calling endpoints that we mark with WARNINGs, and we advise that you do comprehensive testing on datasets that you can afford to recreate before deploying on critical datasets.
@@ -19,14 +19,15 @@ A Postman collection is provided to allow interactive testing of the REST APIs. 
 
 Additional notes about calling the most commonly used endpoints for read/write of asset properties, and for assigning classifications to assets can be found here:
 
-[Read/query: /scan](API_scan.md)
-[Write: /mutate](API_mutate.md)
-[Classification](API_classification.md)
-[Property Mapping Table](API_attrs.md)
+Read/Query properties (/scan): [Read](API_scan.md)
+Write properties (/mutate): [Write](API_mutate.md)
+Classification assignment: [Classification](API_classification.md)
+Qualified Property Names (/attrs)[QualifiedProperties](API_attrs.md)
 
-## Javascript SDK
+# Javascript SDK
 
+blah, blah, blah
 
+# Tandem Plug-ins
 
-## Tandem Plug-ins
-
+blah, blah, blah
