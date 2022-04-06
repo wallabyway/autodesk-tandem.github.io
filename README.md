@@ -1,39 +1,32 @@
-## Welcome to GitHub Pages
+## Autodesk Tandem APIs
 
-You can use the [editor on GitHub](https://github.com/autodesk-tandem/autodesk-tandem.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Tandem digital twins represent a hub of information about your facility and they establish the existence and location of assets within that facility. That foundation is critical, but any good digital twin will include integrations with other systems and will support programmatic management of the asset data. Therefore, API access to the Tandem data model is essential.  Over time, we plan to offer comprehensive APIs in several contexts to help developers customize and extend the foundational capabilities that the Tandem product provides.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[API Contexts](./img/API_contexts.png)
 
-### Markdown
+Sample code for each API context exists on GitHub: [Tandem API Samples](https://github.com/autodesk-tandem)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Currently, these samples are marked "Private". To gain access, you will need to request that we add your GitHub username to the repository.
 
-```markdown
-Syntax highlighted code block
+## REST API
+The REST API is the first one that will be officially supported.  It is the base level API that communicates with the Tandem data server and manages create/read/write/delete of property data for assets. These asset properties are also called "parameters" in the Tandem client app, and those names are interchangeable in this documentation.
 
-# Header 1
-## Header 2
-### Header 3
+The REST API is a thin layer over the underlying Tandem database.  It is designed to be very efficient and powerful, but with that comes some slightly cryptic payloads and some calls that could cause unwanted changes to the facility data if not constructed properly.  We advise that you avoid calling endpoints that we mark with WARNINGs, and we advise that you do comprehensive testing on datasets that you can afford to recreate before deploying on critical datasets.
 
-- Bulleted
-- List
+In general, the recommendation is to use the Tandem client application to setup Facilities and create Parameters. Then once a Facility is setup, use the REST API to read/write asset properties or assign classifications to assets.
 
-1. Numbered
-2. List
+A Postman collection is provided to allow interactive testing of the REST APIs.  It also has sample payloads that explain the various options. Details on how to use the Postman collection can be found here: [Tandem Postman Collection](API_PostmanCollection.md).  The Postman collection also includes basic documentation for each REST endpoint.
 
-**Bold** and _Italic_ and `Code` text
+Additional notes about calling the most commonly used endpoints for read/write of asset properties, and for assigning classifications to assets can be found here:
 
-[Link](url) and ![Image](src)
-```
+[Read/query: /scan](API_scan.md)
+[Write: /mutate](API_mutate.md)
+[Classification](API_classification.md)
+[Property Mapping Table](API_attrs.md)
 
-[Getting Started Guide](./GettingStarted.md)
+## Javascript SDK
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/autodesk-tandem/autodesk-tandem.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Tandem Plug-ins
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
