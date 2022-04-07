@@ -46,7 +46,7 @@ This table of return values is more compact and more complete, but takes a littl
 ]
 ```
 
-The above example is from a user-defined property, and is the kind you will most likely be interacting with via the API.  However, many properties originally came from the Revit or IFC source file, and they a little bit less information, as shown in the following example.
+The above example is from a user-defined property, and is the kind you will most likely be interacting with via the API.  However, many properties originally came from the Revit or IFC source file, and they have a little bit less information, as shown in the following example.
 
 ```
 "0AY",
