@@ -32,9 +32,9 @@ Now let's suppose we only want to retrieve a SINGLE user-defined property.  If w
 
 ![Scan_06](./img/scan_06.png)
 
-The response format for /scan is an array of “things”. The first element is always a version, representing the format used (currently it is always “v1”).  The array will have a return value for each corresponding "key" that was specified.  If a the "includeHistory" flag was true, each property returned may have multiple values with a timestamp.
+The response format for /scan is an array of “things”. The first element is always a version, representing the format used (currently it is always “v1”).  The array will have a return value for each corresponding "key" that was specified.  If the "includeHistory" flag was true, each property returned may have multiple values with a timestamp.
 
-One of the most powerful versions of /scan is when you do NOT specify any specific elements.  In this case, it will search for all elements that have given the property attached, as in the following example:
+One of the most powerful versions of /scan is when you do NOT specify any specific elements.  In this case, it will search for all elements that have the given property attached, as in the following example:
 
 ![Scan_07](./img/scan_07.png)
 
@@ -43,11 +43,11 @@ Here, we have specified a qualified column for the property "z:zAc", and /scan r
 
 ###Looking up Display Names
 
-Obviously, qualified names like "z:zAc" or "n:n" are not suitable for display to the user.  There is another REST endpoint /scan that will allow you to convert back and forth between DisplayName and Column name.
+Obviously, qualified names like "z:zAc" or "n:n" are not suitable for display to the user.  There is another REST endpoint /schema that will allow you to convert back and forth between DisplayName and Column name.
 
 ![Scan_08](./img/scan_08.png)
 
-WARNING: apparently /schema may not be available in the PRODUCTION environment.  There is another endpoint called /attrs which is more supported.  It can be seen here...
+There is another endpoint called /attrs which is more efficient and is used by the Tandem client app to construct a property mapping table.  It can be seen here...
 
 ![Scan_09](./img/scan_09.png)
 
