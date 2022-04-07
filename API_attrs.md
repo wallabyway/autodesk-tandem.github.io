@@ -24,40 +24,44 @@ Here is similar output for a call to the /attrs endpoint:
 
 This table of return values is more compact and more complete, but takes a little bit of logic to read correctly.  If we expand out a single entry to make it more readable...
 
-  ```"zAc"                            // internal name
-  [
-    "Param A",                     // Name
-    "Test 2 - Concrete",           // Category
-    20,                            // DataType (see table for enum values)
-    "",                            // DataTypeContext
-    "",                            // Description
-    "",                            // DisplayName
-    16,                            // Flags (see table for bitmask values)
-    0,                             // Precision (for float values)
-    "",                            // ForgeUnit (not applicable for primitive data types)
-    "",                            // ForgeSymbol (not applicable for primitive data types)
-    "",                            // ForgeSpec (not applicable for primitive data types)
-    "JmLGjkWFRBaaRShzUNIbhw",      // UUID
-    "nGs9n4WISzCjDeDVUWTmqA",      // GroupUUID
-    {"masterFormat":["03 00 00"]}, // ApplicationFilter (Classification mapping)
-    null,                          // AllowedValues (only for specific properties)
-    "e"                            // Context (where it can be attached, see table for enum values)
-  ]```
+```
+"zAc"                            // internal name
+[
+  "Param A",                     // Name
+  "Test 2 - Concrete",           // Category
+  20,                            // DataType (see table for enum values)
+  "",                            // DataTypeContext
+  "",                            // Description
+  "",                            // DisplayName
+  16,                            // Flags (see table for bitmask values)
+  0,                             // Precision (for float values)
+  "",                            // ForgeUnit (not applicable for primitive data types)
+  "",                            // ForgeSymbol (not applicable for primitive data types)
+  "",                            // ForgeSpec (not applicable for primitive data types)
+  "JmLGjkWFRBaaRShzUNIbhw",      // UUID
+  "nGs9n4WISzCjDeDVUWTmqA",      // GroupUUID
+  {"masterFormat":["03 00 00"]}, // ApplicationFilter (Classification mapping)
+  null,                          // AllowedValues (only for specific properties)
+  "e"                            // Context (where it can be attached, see table for enum values)
+]
+```
 
 The above example is from a user-defined property, and is the kind you will most likely be interacting with via the API.  However, many properties originally came from the Revit or IFC source file, and they a little bit less information, as shown in the following example.
 
-  ```"0AY",
-  [
-    "Area",
-    "Dimensions",
-    3,
-    "autodesk.unit.unit:squareFeet-1.0.1",
-    "",
-    "Area",
-    8,
-    0,
-    "squareFeet"
-  ]```
+```
+"0AY",
+[
+  "Area",
+  "Dimensions",
+  3,
+  "autodesk.unit.unit:squareFeet-1.0.1",
+  "",
+  "Area",
+  8,
+  0,
+  "squareFeet"
+]
+```
 
 You can see that the last 5 values do not appear in this case.  Those values are specific to user-defined properties.
 
