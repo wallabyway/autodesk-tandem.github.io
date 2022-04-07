@@ -13,12 +13,11 @@ Then it should show up as a collection...
 
 ![Postman_04](./img/postman_04.png)
 
-That should give you access to the documentation and the interactive collection.  The documentation for the REST API is only half finished, but hopefully being able to run interactively in Postman will help you figure things out.  The two major functions to READ/WRITE data are a little tricky:
-	{{TandemBaseURL}}/modeldata/:modelID/scan
-	{{TandemBaseURL}}/modeldata/:modelID/mutate
+That should give you access to the documentation and the interactive collection.  The documentation for the REST API is only half finished, but hopefully being able to run interactively in Postman will help you figure things out.  The two major functions to READ/WRITE data are a little tricky:  
+- `{{TandemBaseURL}}/modeldata/:modelID/scan`  
+- `{{TandemBaseURL}}/modeldata/:modelID/mutate`  
 
-There is a simple example saved in the Collection, but the full scope of these functions is much broader if you know all the flags to send it.  You can also cross-reference with the REST Sample code on GitHub.  The dev team will get me detailed information about these functions soon and I will update the documentation in Postman (and it SHOULD automatically update on your end).
-
+There is a simple example saved in the Collection, but the full scope of these functions is much broader if you know all the flags to send it.  You can also cross-reference with the REST Sample code on GitHub. 
 
 The Postman collection allows you to interactively test the Tandem REST API calls.  The collection is setup with certain environment variables that allow you to quickly substitute specific authorization tokens and model URNs in the pre-defined tests.
 
