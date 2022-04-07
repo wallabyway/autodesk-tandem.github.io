@@ -99,8 +99,8 @@ The update resulted in a call to POST /template
 As you can see from the Payload, this requires you to know the structure and all the contents of Classification, the ParameterSets, and the mappings.  This is not an easy task and therefore, it isn't recommended at this time.
 
 NOTE: there are two endpoints in the Postman Collection which are deprecated.  They were used in early versions of Tandem before the Facility Template mechanism was created.  These should not be used and will be removed soon.
-	{{TandemBaseURL}}/twins/:twinID/classification
-	{{TandemBaseURL}}/twins/:twinID/psets
+	{{TandemBaseURL}}/twins/:twinID/classification  
+	{{TandemBaseURL}}/twins/:twinID/psets  
 
 You can get all the information associated with the global constructs via a call to /inlinetemplate, as in the following screenshot
 
