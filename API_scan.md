@@ -41,7 +41,7 @@ One of the most powerful versions of /scan is when you do NOT specify any specif
 Here, we have specified a qualified column for the property "z:zAc", and /scan returns us all elements that have that property attached.
 
 
-###Looking up Display Names
+### nLooking up Display Names
 
 Obviously, qualified names like "z:zAc" or "n:n" are not suitable for display to the user.  There is another REST endpoint /schema that will allow you to convert back and forth between DisplayName and Column name.
 
