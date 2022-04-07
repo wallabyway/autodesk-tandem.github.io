@@ -23,8 +23,8 @@ Additional notes about calling the most commonly used endpoints for read/write o
 
 - Read/Query properties (/scan): [Read](API_scan.md)
 - Write properties (/mutate): [Write](API_mutate.md)
-- Classification assignment: [Classification](API_classification.md)
-- Qualified Property Names (/attrs)[QualifiedProperties](API_attrs.md)
+- Classification and Parameter assignment: [Classification](API_classification.md)
+- Qualified Property Names (/attrs): [QualifiedProperties](API_attrs.md)
 
 ## Javascript SDK
 
