@@ -8,10 +8,10 @@ Sample code for each API context exists on GitHub: [Tandem API Samples](https://
 
 _NOTE: Currently, these samples are marked "Private". To gain access, you will need to request that we add your GitHub username to the repository._
 
-The main read/write functions will not be very interesting until you learn how to setup a Facility, create user-defined Parameters, and map those parameters to assets using Classifications in a Facility Template.  To learn how to do that and to get started with the product, you can get started with the product, visit: [intandem.autodesk.com](https://intandem.autodesk.com/)
+The main read/write functions will not be very interesting until you learn how to setup a Facility, create user-defined Parameters, and map those parameters to assets using Classifications in a Facility Template.  To learn how to do that and to get started with the product, visit: [intandem.autodesk.com](https://intandem.autodesk.com/)
 
 ## REST API
-The REST API is the first one that will be officially supported.  It is the base level API that communicates with the Tandem data server and manages create/read/write/delete of property data for assets. These asset properties are also called "parameters" in the Tandem client app, and those names are interchangeable in this documentation.
+The REST API is the first one that will be officially supported.  It is the base level API that communicates with the Tandem data server and manages `create/read/write/delete` of property data for assets. These asset properties are also called "parameters" in the Tandem client app, and those names are interchangeable in this documentation.
 
 The REST API is a thin layer over the underlying Tandem database.  It is designed to be very efficient and powerful, but with that comes some slightly cryptic payloads and some calls that could cause unwanted changes to the facility data if not constructed properly.  We advise that you avoid calling endpoints that we mark with WARNINGs, and we advise that you do comprehensive testing on datasets that you can afford to recreate before deploying on critical datasets.
 
@@ -32,9 +32,9 @@ A sample project using the REST API can be found here: [REST Sample](https://git
 
 The Javascript SDK allows you to interact with the Tandem database via Javascript and in "Embedded Viewer" scenarios, similar to how developers use the Forge Viewer. 
 
-This API is usable now (in fact the Tandem client uses it), but it is not officially released yet.  There will be some re-factoring to make it usable without instantiating the viewer itself, and some new abstractions and helper functions will be added to make communicating with the Tandem database easy.
+This API is usable now (in fact the Tandem client uses it), but it is not officially released yet.  There will be some re-factoring to make it usable without instantiating the viewer itself, and some new abstractions and helper functions will be added to make easy to communicate with the Tandem database.
 
-Developers with experience using the Forge Viewer will be able to quickly get up to speed because the presentation layer is mostly the same.  However, the Tandem Viewer expects there to always be mulitple models loaded, so you should avoid any specific functions that assume only a single model. Accessing the data behind the visual geometry is powered by the Tandem Database instead of the traditional SVF format used by the Forge Viewer. That gives you access to things like Room and Space information, even when it spans across multiple source models.
+Developers with experience using the Forge Viewer will be able to quickly get up to speed because the presentation layer is mostly the same.  However, the Tandem Viewer expects there to always be mulitple models loaded, so you should avoid any specific functions that assume only a single model. Accessing the data behind the visual geometry is powered by the Tandem Database instead of the traditional SVF format used by the Forge Viewer. That gives you access to things like Room and Space information, even when it spans across multiple source models. Using the Tandem database also means it is easy to add your own user-defined properties to assets in the model.
 
 The Javascript SDK is not officially documented yet, but an interactive learning tool has been provided to help you experiment with the API. That learning tool and its source code can be found here: [Embedded Viewer Sample](https://github.com/autodesk-tandem/tandem-sample-emb-viewer)
 
