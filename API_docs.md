@@ -11,7 +11,7 @@ Tandem also allows you to make a simple Hyperlink reference and attach it to ele
 ![Docs_02](./img/docs_02.png)
 ![Docs_03](./img/docs_03.png)
 
-This same property value can also come from a document that has already been imported into this Facility (but is not assigned to this particular asset).  In this case, you must first retrieve the internally stored URN of the document within Tandem.  See the payload to the /mutate call below for an example.
+This same property value can also come from a document that has already been imported into this Facility (but is not assigned to this particular asset).  In this case, you must first retrieve the internally stored URN of the document within Tandem. Use the /twins/:twinID endpoint to get information about the Facility, which includes the internal document URNs. See the payload to the /mutate call below for an example.
 
 ![Docs_04](./img/docs_04.png)
 ![Docs_05](./img/docs_05.png)
@@ -24,7 +24,7 @@ This requires you to first use the Forge Data Management APIs to access the info
 
 ![Docs_07](./img/docs_07.png)
 
-Then use the /twins/:twinID for the current Facility to retrieve the list of documents associated with the Facility.
+Then use the /twins/:twinID endpoing to retrieve the list of documents associated with the Facility.
 
 ![Docs_08](./img/docs_08.png)
 ![Docs_09](./img/docs_09.png)
@@ -40,6 +40,6 @@ To retrieve information about a given document, you just need to know the intern
 
 The content of the document can be retrieved in binary form by using: `GET /twins/:twinID/documents/:documentID/content`
 
-The document can be deleted using the Tandem URN and the following endpoint: `DELETE /twins/:twinID/documents/:documentID`
+The document can be deleted using the Tandem document URN and the following endpoint: `DELETE /twins/:twinID/documents/:documentID`
 
 ![Docs_13](./img/docs_13.png)
