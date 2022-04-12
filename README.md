@@ -25,12 +25,13 @@ Additional notes about calling the most commonly used endpoints for read/write o
 - Write properties (/mutate): [Write](API_mutate.md)
 - Classification and Parameter assignment: [Classification](API_classification.md)
 - Qualified Property Names (/attrs): [QualifiedProperties](API_attrs.md)
+- Documents: [Documents](API_docs.md)
 
 A sample project using the REST API can be found here: [REST Sample](https://github.com/autodesk-tandem/tandem-sample-rest)
 
 ## Javascript SDK
 
-The Javascript SDK allows you to interact with the Tandem database via Javascript and in "Embedded Viewer" scenarios, similar to how developers use the Forge Viewer. 
+The Javascript SDK allows you to interact with the Tandem database via Javascript and in "Embedded Viewer" scenarios, similar to how developers use the Forge Viewer.
 
 This API is usable now (in fact the Tandem client uses it), but it is not officially released yet.  There will be some re-factoring to make it usable without instantiating the viewer itself, and some new abstractions and helper functions will be added to make easy to communicate with the Tandem database.
 
