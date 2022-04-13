@@ -33,12 +33,14 @@ You can look up the URN that Tandem now uses internally and add that to the elem
 
 ![Docs_10](./img/docs_10.png)
 
-To retrieve information about a given document, you just need to know the internal Tandem URN of the particular document, as in the following example: `GET /twins/:twinID/documents/:documentID/content`
+To retrieve information about a given document, you just need to know the internal Tandem URN of the particular document, as in the following example: `GET /twins/:twinID/documents/:documentID`   
 
 ![Docs_11](./img/docs_11.png)
 ![Docs_12](./img/docs_12.png)
 
-The content of the document can be retrieved in binary form by using: `GET /twins/:twinID/documents/:documentID/content`
+The content of the document can be retrieved in binary form by using: `GET /twins/:twinID/documents/:documentID/content`  
+
+You can also use the value for `signedLink` (as in the image above) to show the contents in another browser window
 
 The document can be deleted using the Tandem document URN and the following endpoint: `DELETE /twins/:twinID/documents/:documentID`
 
