@@ -1,0 +1,3 @@
+[submodule "sample-emb-viewer"]
+	path = sample-emb-viewer
+	url = https://github.com/autodesk-tandem/tandem-sample-emb-viewer.git
